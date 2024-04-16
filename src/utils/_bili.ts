@@ -116,6 +116,7 @@ export const cookies2access_key = async (cookies: {
   const log = loggerc.child({
     module: "通过WEB端Cookies获取APP端access_key(IOS APPKEY)",
   });
+  console.log(cookies);
   if (!cookies.SESSDATA || !cookies.DedeUserID || !cookies.bili_jct) {
     log.info({ status: "Failed: No cookies" });
     return;
