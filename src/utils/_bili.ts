@@ -205,7 +205,7 @@ export const cookies2access_key = async (cookies: {
               expires_in: number;
             };
           }) => {
-            console.log("res:"+res);
+            log.info({rest:res});
             if (res.code !== 0 || !res?.data?.access_token) {
               log.info({ status: "Failed: No access_token" });
               return;
