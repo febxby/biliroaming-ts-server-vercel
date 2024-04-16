@@ -12,6 +12,7 @@ const main = async (req: NextApiRequest, res: NextApiResponse) => {
   const data = qs.parse(url.search.slice(1));
   // console.log(data)
   const cookies = cookieToJson(data.cookies as string);
+  console.log(cookies)
   res.json({
     // cookies: cookies,
     access_key: await cookies2access_key(cookies as any),
@@ -19,7 +20,7 @@ const main = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 function cookieToJson(cookies: string) {
-  // console.log(cookies)
+  console.log(cookies)
   let cookieArr = cookies.split("; ");
   let obj = {};
   cookieArr.forEach((i) => {
