@@ -18,7 +18,7 @@ const main = async (req: NextApiRequest, res: NextApiResponse) => {
 };
 
 function cookieToJson(cookies: string) {
-  // console.log(cookies)
+  console.log(cookies)
   let cookieArr = cookies.split("; ");
   let obj = {};
   cookieArr.forEach((i) => {
